@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="src/assets/yinyang.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/yinyang.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="og:site_name" content="Ridin on Dreams (Hololive 7th fes) Sorting">
+  <meta name="og:description" content="A simple website for ranking Ridin on Dreams (Hololive 7th fes) performances via a manual merge sort.">
+  <meta name="og:image" content="https://i.imgur.com/eWBGjIu.jpeg">
+  <title>Ridin on Dreams Sorting</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+
+  <script src="src/js/data.js"></script>
+  <script src="src/js/data/2026-03-16.js"></script>
+
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="sorter">
+        <img src="src/assets/defaultL.png" class="left sort image">
+
+        <div class="starting start button">Ridin on Dreams (Hololive 7th fes) Performances Ranking<br><br>Click to Start!</div>
+        <div class="starting load button">Load <span></span></div>
+
+        <div class="loading button"><div></div><span>Loading...</span></div>
+
+        <div class="sorting tie button">Tie</div>
+        <div class="sorting undo button">Undo</div>
+        <div class="sorting save button">Save Progress</div>
+
+        <div class="finished save button">Generate Result URL</div>
+        <div class="finished getimg button">Generate Image</div>
+        <div class="finished list button">Generate Text List</div>
+
+        <img src="src/assets/defaultR.png" class="right sort image">
+
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
+
+    <div class="options"></div>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    <div class="results"></div>
+
+    <div class="info">
+		<p>Sorter for Ridin on Dreams (Hololive 7th fes) Performances.</p>
+		<p>Filter by Stages and/or Branches if you'd like, exclude certain types of performances if you'd like, then hit Start at the top of the page.</p>
+		<p>Hover over a checkbox for a tooltip with additional information about what it does.</p>
+        <p>When sorting, select the performance you like better from the two options. You can hit Tie if you like them equally, or don't remember either performance. If you made a mistake, you can hit Undo to go back one choice.</p>
+		<p>You can save your progress by hitting "Save Progress", and then storing the URL for later. Your browser cookies should also automatically save your progress (Hit "Load Autosave").</p>
+		
+		<br><br>
+        <p>This is a merge sort, so you will be selecting one performance out of two, hundreds of times. This might take you a while, especially if you sort all 97 performances.</p>
+        <p>Performances with multiple songs in them (medley) are treated as a single performance, indicated by "→" in the text.</p>
+		<p>Some of the images of multi-talent performances are a bit scuffed, since finding a good frame with all talents visible was quite challenging. Apologies.</p>
+
+        <br><br>
+
+        <p>Keyboard controls during sorting: H (pick left), J (undo), K (tie), L (pick right), S (save progress).</p>
+        <p>Before sorting: S/Enter (start sorting) L (load progress).
+        <p>1/2/3 always correspond to the first/second/third buttons.</p>
+        
+        <br><br>
+
+		<p>All art, and models found in screenshots, belong to Hololive Production.</p>
+        <p>Original site and code is from <a href="https://execfera.github.io/charasort/">this site</a>, by execfera.</p>
+		<p>If you notice something wrong with this sorter, please contact me on <a href="https://linktr.ee/kaxymonoxy">one of my socials</a>.</p>
+		<p>If you like this site, you may also enjoy my 6th fes sorter (not hosted on a site anymore, can find it in my repos. Sorter works entirely client side so you can just download the project and open the html file), or <a href="https://damecon.github.io/HoloSort/">this site</a>, by damecon, which is also a clone of execfera's site.</p>
+		<p>In damecon's sorter, you can rank each Hololive talent against eachother, in whatever criteria you want.</p>
+		
+        <br><br>
+
+        <p>March 8th, 2026 - Initial Release.</p>
+    </div>
+</div>
+</body>
+
+</html>
